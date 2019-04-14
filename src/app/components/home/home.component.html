@@ -1,0 +1,88 @@
+<div class="search">
+    <form>
+        <div>
+            <label>Search games</label>
+            <div class="row row-search">
+                <div class="col">
+                    <input type="search" />
+                </div>
+                <div class="col">
+                    <button type="submit">Go <img src="assets/images/logo-go.PNG" /></button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col">
+                    <label>Game Type</label>
+                    <div>
+                        <select>
+                            <option value="html5">HTML5</option>
+                            <option value="two">two</option>
+                            <option value="three">three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <label>Quality</label>
+                    <div>
+                        <select>
+                            <option value="all">All</option>
+                            <option value="two">two</option>
+                            <option value="three">three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <label>Genre</label>
+                    <div>
+                        <select>
+                            <option value="all">All</option>
+                            <option value="two">two</option>
+                            <option value="three">three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <label>Order By</label>
+                    <div>
+                        <select>
+                            <option value="latest">latest</option>
+                            <option value="two">two</option>
+                            <option value="three">three</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </form>
+</div>
+
+
+<div class="content">
+    <div class="category" *ngFor="let item of items">
+
+        <div class="category-header">
+            <div class="row ">
+                <div class="col text-left">
+                    <a href="#"><h4><img src="assets/images/logo-icon.png" width="17" /> {{item.cat_name}}</h4></a>
+                </div>
+                <div class="col text-right">
+                    <a href="#"><span>See All ></span></a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="category-body">
+            <div class="row">
+                <div class="col" *ngFor="let game of item.games" (click)="goGame(game.game_id)">
+                    <div class="image"><img src="{{game.game_thumb}}" /></div>
+                    <div class="title">{{game.game_name}}</div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    
+    </div>
+</div>

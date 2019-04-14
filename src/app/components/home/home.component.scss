@@ -1,0 +1,91 @@
+.search {
+    padding: 15px 0;
+    text-align: left;
+    max-width: 700px;
+    margin: auto;
+    .row-search {
+        padding-bottom: 25px;
+        .col:first-of-type {
+            width: calc(100% - 100px);
+            max-width: calc(100% - 100px);
+            min-width: calc(100% - 100px);
+        }
+        .col:last-of-type {
+            width: 100px;
+            padding-left: 0;
+        }
+    }
+    label {
+        color: rgba(255,255,255,.5);
+    }
+    input[type='search'],select {
+        width: 100%;
+        background: rgba(255,255,255,.2);
+        border: 0;
+        padding: 5px;
+        color: #8ce6e6;
+        outline: 0;
+    }
+    select {
+        min-width: 100px;
+        margin-bottom: 10px;
+        option {
+            width: 100%;
+        }
+    }
+    button {
+        background: #8ce6e6;
+        color: #000;
+        width: 100%;
+        font-weight: bold;
+        border: 0;
+        outline: 0;
+        border-radius: 3px;
+        padding: 5px;
+        cursor: pointer;
+    }
+}
+
+.content {
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding: 50px 0;
+    .category-header {
+        border-bottom: .3px solid #aaa;
+        width: 100%;
+        padding-top: 25px;
+        a {
+            text-decoration: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        h4 {
+            font-weight: normal;
+            img {
+                position: relative;
+                top: -2px;
+            }
+        }
+        span {
+            color: #8ce6e6;
+        }
+    }
+    .category-body {
+        .row .col {
+            min-width: 115px;
+            max-width: 150px;
+            text-align: left;
+            padding: 10px;
+            .image {
+                width: 100%;
+                height: 150px;
+                overflow: hidden;
+                margin-bottom: 5px;
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+        }
+        a {color: #fff;font-size: 12px;}
+    }
+}
