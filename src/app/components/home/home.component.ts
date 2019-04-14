@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   
   ngOnInit() {
     this.http.get(this.urlHome).subscribe(data => {
-      this.items = data.games_list;
+      this.items = data;
     });
   }
 
